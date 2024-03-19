@@ -6,3 +6,23 @@
 //
 
 import Foundation
+import SpringAnimation
+
+struct Animation {
+    
+    var preset: String
+    var curve: String
+    var force: Double
+    var duration: Double
+    var delay: Double
+    
+    static func getAnimation() -> Animation {
+        Animation(
+            preset: DataStore().animations.randomElement()?.rawValue ?? "pop",
+            curve: DataStore().curves.randomElement()?.rawValue ?? "easeInBack",
+            force: Double.random(in: 0.5...3.0),
+            duration: Double.random(in: 0.5...3.0),
+            delay: 1.0
+        )
+    }  
+}

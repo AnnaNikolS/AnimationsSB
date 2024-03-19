@@ -10,8 +10,6 @@ import SpringAnimation
 
 final class DataStore {
     
-    let dataStore = DataStore()
-    
     let animations: [AnimationPreset] = [
         .fadeIn,
         .fadeInDown,
